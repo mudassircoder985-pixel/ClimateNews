@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather news web</title>
+    <link rel="icon" type="image/png" href="weather.png">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <div class="top-announcement">
+        <div class="alert-badge">
+            <img src="alert.svg" alt="Alert" class="svg-icon">
+            <span>Latest Alerts</span>
+        </div>
+        <p class="announcement-text">
+            More rain-wind/thundershower predicted in upper and central parts during the weekend.
+        </p>
+    </div>
+
+
+    
+   <header class="navbar">
+    <div class="brand-title">
+        <h1>WEATHER NEWS</h1>
+        <img src="weather.png" alt="">
+    </div>
+    
+    <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        
+        <!-- Forecast Link -->
+        <a href="#" class="nav-item">Forecast 
+            <svg class="nav-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle; display: inline-block;">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <!-- یہ ڈبہ نیچے کھلے گا -->
+            <div class="dropdown-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </a>
+        
+        <!-- Radar Link -->
+        <a href="#" class="nav-item">Radar 
+            <svg class="nav-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle; display: inline-block;">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <div class="dropdown-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </a>
+        
+        <!-- Alerts Link -->
+        <a href="#" class="nav-item">Alerts 
+            <svg class="nav-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle; display: inline-block;">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <div class="dropdown-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </a>
+        
+        <a href="#">Contact
+              <svg class="nav-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle; display: inline-block;">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <div class="dropdown-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </a>
+    </nav>
+</header>
+
+</header>
+
+
+    <main class="main-container">
+        <div class="search-section">
+            <div class="search-box-wrapper">
+                <input 
+                    type="text" 
+                    id="searchStation" 
+                    placeholder="-- Search city --"
+                    autocomplete="off"
+                    list="stationsList"
+                >
+                <datalist id="stationsList">
+                    <option value="Islamabad"></option>
+                    <option value="Karachi"></option>
+                    <option value="Lahore"></option>
+                    <option value="Peshawar"></option>
+                    <option value="Quetta"></option>
+                    <option value="Gilgit"></option>
+                    <option value="Muzaffarabad"></option>
+                    <option value="Multan"></option>
+                    <option value="Faisalabad"></option>
+                </datalist>
+                <button class="searchBtn">Search</button>
+            </div>
+        </div>
+
+        <section class="hero-weather-card">
+            <div class="hero-header">
+                <div>
+                    <h2>Weather Now</h2>
+                    <p class="location-name">Islamabad </p>
+                </div>
+                <span class="live-tag">LIVE</span>
+            </div>
+
+            <div class="hero-body">
+                <div class="main-temp">28.5°C</div>
+                
+                <div class="weather-metrics">
+                    <div class="metric">
+                        <img src="wind.svg" alt="Wind" class="svg-icon">
+                        <div>
+                            <span>Wind Speed</span>
+                            <strong>0 m/s</strong>
+                        </div>
+                    </div>
+
+                    <div class="metric">
+                        <img src="humidity.svg" alt="Humidity" class="svg-icon">
+                        <div>
+                            <span>Humidity</span>
+                            <strong>89%</strong>
+                        </div>
+                    </div>
+
+                    <div class="metric">
+                        <img src="pressure.svg" alt="Pressure" class="svg-icon">
+                        <div>
+                            <span>Pressure</span>
+                            <strong>942.1 hPa</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h3 class="section-heading">Cities Forecast</h3>
+            <div class="cities-grid"></div>
+        </section>
+    </main>
+
+    <div class="floating-widgets">
+        <button class="assistant-btn weather-assistant" id="weatherAssistantBtn">
+            <img src="ai phone.svg" alt="Bot" class="svg-icon">
+            <span>Weather Assistant</span>
+        </button>
+        <button class="assistant-btn flood-assistant">
+            <img src="flood.svg" alt="Bot" class="svg-icon">
+            <span>Flood Assistant</span>
+        </button>
+    </div>
+
+    <div class="ai-chat-modal" id="aiChatModal">
+        <div class="ai-chat-header">
+            <span>AI Weather Assistant</span>
+            <button class="close-chat" id="closeChatBtn">&times;</button>
+        </div>
+        <div class="ai-chat-body" id="aiResponse">
+            Pehle koi shehar search karein, phir mujh se mausam ke baare mein kuch bhi poochein!
+        </div>
+        <div class="ai-chat-footer">
+            <input type="text" id="aiInput" placeholder="Ask something...">
+            <button id="aiBtn">Send</button>
+        </div>
+    </div>
+
+<script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run"
+    }
+  }
+</script> 
+
+<script src="script.js" type="module"></script> 
+
+</body>
+</html>
